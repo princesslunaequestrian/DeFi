@@ -29,7 +29,7 @@ def calc_price_velosity(n, price, i, delta):
     arr=[]
     if (i+delta)<=(len(price)-1):
         for j in range (1, n+1, 1):
-            de=(float(price[i+delta][j])-float(price[i][j]))/delta
+            de=(float(price[i][j])-float(price[i-delta][j]))/delta
             if de<0:
                 de=0
             arr.append(de)
@@ -156,3 +156,5 @@ def calc_profit_for_period(n, price, funds, delta,start_step, period):
     return prof
 #-----------------------
 
+
+# %%
